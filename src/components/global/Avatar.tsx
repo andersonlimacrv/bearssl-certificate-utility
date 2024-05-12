@@ -1,17 +1,6 @@
 import AnimatedTooltip from '@/components/ui/animated-tooltip';
 import React, { useState, useEffect } from 'react';
-import { BsHourglassSplit } from 'react-icons/bs';
-
-// Componente de Skeleton para simular o conteúdo enquanto o fetch está em andamento
-const Skeleton: React.FC = () => {
-	return (
-		<div className="flex flex-row items-center justify-center mb-10 w-full">
-			<div className="bg-gray-800 h-28 w-28 animate-pulse rounded-full">
-				<BsHourglassSplit className="text-white h-full w-6 mx-auto my-auto" />
-			</div>
-		</div>
-	);
-};
+import Skeleton from './Skeleton';
 
 interface Person {
 	id: number;
@@ -60,14 +49,16 @@ const Avatar: React.FC = () => {
 	}, []);
 
 	return (
-		<div>
-			{loading ? (
-				<Skeleton />
-			) : (
-				<div className="flex flex-row items-center justify-center mb-10 w-full">
+		<div className="my-12">
+			<div className="flex flex-row items-center justify-center w-full h-full">
+				{loading ? (
+					<div className="h-16 w-16 lg:h-28 lg:w-28">
+						<Skeleton />
+					</div>
+				) : (
 					<AnimatedTooltip item={userData!} />
-				</div>
-			)}
+				)}
+			</div>
 		</div>
 	);
 };

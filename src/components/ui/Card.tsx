@@ -8,7 +8,7 @@ interface NodeHasChild {
 // Define o layout básico do card
 const CardLayout: React.FC<NodeHasChild> = ({ children }) => {
 	return (
-		<div className="block max-w-sm p-6 bg-muted border border-muted-foreground rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-900 transition-all duration-200 dark:group-[:hover]::bg-gray-900 group-[:hover]:bg-gray-100">
+		<div className="block max-w-sm p-6 bg-muted/80 border border-muted-foreground rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-900/70 dark:border-gray-700 dark:hover:bg-gray-900 transition-all duration-200 dark:group-[:hover]::bg-gray-900 group-[:hover]:bg-gray-100">
 			{children}
 		</div>
 	);

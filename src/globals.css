@@ -4,42 +4,47 @@
 
 @layer base {
   :root {
-    --background: #efefef;
+    --background: rgb(239, 239, 239);
+    --glass-background:rgba(239, 239, 239, 0.5);
     --foreground:  rgba(26,35,46,1);
 
-    --card: #dedde2;
+    --card: rgb(222, 221, 226);
     --card-foreground: rgba(2, 7, 19, 1);
 
     --popover: rgba(255, 255, 255, 1);
     --popover-foreground: rgba(2, 7, 19, 1);
 
     --primary: rgba(26,35,46,1);
-    --primary-foreground: #fbfbfb;
+    --primary-foreground: rgb(251, 251, 251);
 
     --secondary: rgba(241, 245, 249, 1);
     --secondary-foreground: rgba(15, 23, 41, 1);
 
-    --muted: #dedde2;
+    --muted: rgb(222, 221, 226);
     --muted-foreground: rgba(125, 140, 161, 1);
 
-    --accent: #dedde2;
-    --accent-foreground: #cbd5e1;
+    --accent: rgb(222, 221, 226);
+    --accent-foreground: rgb(203, 213, 225);
 
     --destructive: rgba(239, 67, 67, 1);
-    --destructive-foreground: #fbfbfb;
+    --destructive-foreground: rgb(251, 251, 251);
 
-    --border: #dedde2;
-    --input: #dedde2;
+    --border: rgb(222, 221, 226);
+    --input: rgb(222, 221, 226);
     --ring: rgba(2, 7, 19, 1);
 
-    --one: #0ACAC0;
-    --one-foreground: #fbfbfb;
+    --one: rgba(0, 170, 204,1);
+    --two: rgba(209, 35, 225,1);
+    --one-transparent: rgba(0, 170, 204,.3);
+    --two-transparent: rgba(209, 35, 225,.5);
+    --one-foreground: rgb(251, 251, 251);
 
     --radius: 0.5rem;
   }
 
   .dark {
     --background: rgba(26, 35, 46, 1);
+    --glass-background:rgba(26, 35, 46, 0.5);
     --foreground: rgba(248, 250, 252, 1);
 
     --card: rgba(2, 7, 19, 1);
@@ -54,17 +59,20 @@
     --secondary: rgba(29, 40, 57, 1);;
     --secondary-foreground: rgba(248, 250, 252, 1);
 
-    --muted: rgba(29, 40, 57, 1);;
-    --muted-foreground: rgba(148, 163, 184, 1);
+    --muted: rgb(29, 40, 57);;
+    --muted-foreground: rgba(125, 140, 161, 1);
 
-    --accent: rgba(10, 202, 192, 1);
+    --accent: rgb(0, 170, 204);
 
     --accent-foreground: rgb(20, 38, 57,1);
 
     --destructive: rgba(124, 29, 29, 1);
     --destructive-foreground: rgba(248, 250, 252, 1);
 
-    --one: #0acac0;
+    --one: rgba(0, 170, 204,1);
+    --two: rgba(209, 35, 225,1);
+    --one-transparent: rgba(0, 170, 204,.3);
+    --two-transparent: rgba(209, 35, 225,.5);
     --one-foreground: rgba(248, 250, 252, 1);
 
     --border: rgba(29, 40, 57, 1);
@@ -87,7 +95,7 @@
 .gradient-01 {
     background-image: linear-gradient(
       270deg,
-      hsl(295deg 76% 51%) 0%,
+      #d123e1 0%,
       hsl(284deg 70% 73%) 26%,
       hsl(257deg 70% 86%) 39%,
       hsl(202deg 92% 90%) 50%,
@@ -96,4 +104,25 @@
       hsl(220deg 76% 51%) 100%
     );
     filter: blur(110px);
+    z-index: -1;
+    opacity: 0.5;
   }
+  
+
+
+  body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */ 
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--glass-background);
+            /* color of the tracking area */ 
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--muted-foreground);    /* color of the scroll thumb */ 
+    border-radius: 10px;       /* roundness of the scroll thumb */ 
+    border: 1px solid var(--glass-background);  /* creates padding around scroll thumb */ 
+  }
+
+  

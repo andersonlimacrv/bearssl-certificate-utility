@@ -5,15 +5,13 @@ import Background from '@/components/global/Background';
 
 function App() {
 	return (
-		<>
-			<section className="relative w-full h-full">
-				<Background />
-				<Navbar />
-				<Layout>
-					<Hero />
-				</Layout>
-			</section>
-		</>
+		<section className="relative w-full h-full">
+			<Background />
+			<Navbar />
+			<Layout>
+				<Hero />
+			</Layout>
+		</section>
 	);
 }
 
