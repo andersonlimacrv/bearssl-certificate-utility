@@ -20,7 +20,7 @@
     --secondary: rgba(241, 245, 249, 1);
     --secondary-foreground: rgba(15, 23, 41, 1);
 
-    --muted: rgb(222, 221, 226);
+    --muted: rgba(222, 221, 226,1);
     --muted-foreground: rgba(125, 140, 161, 1);
 
     --accent: rgb(222, 221, 226);
@@ -124,5 +124,7 @@
     border-radius: 10px;       /* roundness of the scroll thumb */ 
     border: 1px solid var(--glass-background);  /* creates padding around scroll thumb */ 
   }
+
+  
 
   

@@ -1,6 +1,7 @@
 import AnimatedTooltip from '@/components/ui/animated-tooltip';
 import React, { useState, useEffect } from 'react';
 import Skeleton from './Skeleton';
+import { motion } from 'framer-motion';
 
 interface Person {
 	id: number;
@@ -49,14 +50,20 @@ const Avatar: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="my-12">
+		<div className="">
 			<div className="flex flex-row items-center justify-center w-full h-full">
 				{loading ? (
 					<div className="h-16 w-16 lg:h-28 lg:w-28">
 						<Skeleton />
 					</div>
 				) : (
-					<AnimatedTooltip item={userData!} />
+					<motion.div
+						initial={{ opacity: 0 }}
+						transition={{ duration: 0.6 }}
+						animate={{ opacity: 1 }}
+					>
+						<AnimatedTooltip item={userData!} />
+					</motion.div>
 				)}
 			</div>
 		</div>
