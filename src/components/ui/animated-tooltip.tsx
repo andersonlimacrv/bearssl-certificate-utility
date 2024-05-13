@@ -59,7 +59,7 @@ const AnimatedTooltip: React.FC<Props> = ({ item }) => {
 						rotate,
 						whiteSpace: 'nowrap',
 					}}
-					className="absolute -top-16 -left-[100%] lg:-left-1/2 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-gray-900/60 z-50 shadow-xl px-4 lg:px-8 py-1"
+					className="absolute -top-16 -left-[80%] lg:-left-1/2 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-gray-900/60 z-50 shadow-xl px-4 lg:px-8 py-1"
 				>
 					<div className="absolute inset-x-10 z-30 w-[20%] -bottom-[2px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px" />
 					<div className="absolute left-12 w-[65%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px" />
@@ -85,7 +85,7 @@ const AnimatedTooltip: React.FC<Props> = ({ item }) => {
 					width={150}
 					src={item.image}
 					alt={item.name}
-					className="object-cover !m-0 !p-0 object-top rounded-full lg:h-28 lg:w-28 h-16 w-16 border-[1px] border-muted-foreground/30 relative transition duration-500 drop-shadow-2xl cursor-pointer"
+					className="object-cover !m-0 !p-0 object-top rounded-full lg:h-28 lg:w-28 h-20 w-20 border-[1px] border-muted-foreground/30 relative transition duration-500 drop-shadow-2xl cursor-pointer"
 				/>
 			</a>
 		</div>

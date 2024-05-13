@@ -24,7 +24,7 @@ const ToggleTheme: React.FC = () => {
 
 	return (
 		<>
-			<label className="themeSwitcherThree relative inline-flex cursor-pointer select-none items-center drop-shadow-1xl">
+			<label className="themeSwitcherThree relative inline-flex cursor-pointer select-none items-center drop-shadow-lg">
 				<input
 					type="checkbox"
 					checked={theme === 'dark'}

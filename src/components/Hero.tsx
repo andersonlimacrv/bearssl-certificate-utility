@@ -2,12 +2,13 @@ import CardLayout, { Header, Body } from '@/components/ui/Card';
 import Avatar from '@/components/global/Avatar';
 import { motion } from 'framer-motion';
 import { charVariants } from '@/utils/variants';
+import SSLToolForm from './forms/sslToolForm';
 
 import splitStringUsingRegex from '@/utils/splitStringUsingRegex';
 
-const heading = 'Bearssl Certificate Utility';
+const heading = 'BearSSL Certificate Utility';
 const text =
-	'A small website to convert website certificates into a format accepted by BearSSL.';
+	'This is a small website that features a specialized tool for generating C/C++ header files containing trust anchors for SSL/TLS certificates, specifically tailored for use with BearSSL.';
 
 function Hero() {
 	const headingChars = splitStringUsingRegex(heading);
@@ -16,10 +17,10 @@ function Hero() {
 	return (
 		<div className="flex flex-col w-full bg-transparent">
 			<div className="flex flex-col lg:flex-row justify-center lg:justify-between gap-y-2">
-				<div className="order-1 lg:order-2 flex w-full justify-center lg:justify-end lg:pr-16 2xl:pr-36 my-4 lg:my-12">
+				<div className="order-1 lg:order-2 flex w-full lg:w-1/3 justify-center lg:justify-end lg:pr-16 2xl:pr-36 my-4 lg:my-12">
 					<Avatar />
 				</div>
-				<div className="order-2 lg:order-1 flex flex-col w-full px-4 lg:pl-16 2xl:pl-36 py-4 2xl:py-16">
+				<div className="order-2 lg:order-1 flex flex-col w-full lg:w-2/3 px-4 lg:pl-16 2xl:pl-36 py-4 lg:py-12">
 					<Header>
 						<motion.h1
 							initial="hidden"
@@ -43,7 +44,7 @@ function Hero() {
 					<motion.p
 						initial="hidden"
 						whileInView="reveal"
-						transition={{ staggerChildren: 0.02 }}
+						transition={{ staggerChildren: 0.015 }}
 					>
 						<span>
 							{textChars.map((char) => (
@@ -65,11 +66,7 @@ function Hero() {
 				<CardLayout>
 					<Header>{heading}</Header>
 					<Body>
-						<p>
-							This utility allows you to download
-							and verify certificates from any
-							certificate authority.
-						</p>
+						<SSLToolForm />
 					</Body>
 				</CardLayout>
 			</div>

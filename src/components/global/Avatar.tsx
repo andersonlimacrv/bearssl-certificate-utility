@@ -53,7 +53,7 @@ const Avatar: React.FC = () => {
 		<div className="">
 			<div className="flex flex-row items-center justify-center w-full h-full">
 				{loading ? (
-					<div className="h-16 w-16 lg:h-28 lg:w-28">
+					<div className="h-20 w-20 lg:h-28 lg:w-28">
 						<Skeleton />
 					</div>
 				) : (
