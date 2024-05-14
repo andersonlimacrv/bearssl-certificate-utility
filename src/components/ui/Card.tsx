@@ -1,14 +1,21 @@
 import React, { ReactNode } from 'react';
+import { cn } from '@/utils/cn';
 
 // Definir as propriedades aceitas pelo CardLayout
 interface NodeHasChild {
 	children: ReactNode;
+	className?: string;
 }
 
 // Define o layout básico do card
-const CardLayout: React.FC<NodeHasChild> = ({ children }) => {
+const CardLayout: React.FC<NodeHasChild> = ({ children, className }) => {
 	return (
-		<div className="flex flex-col w-full p-6 bg-gray-100/50 border backdrop-blur-sm border-muted-foreground rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-900/50 dark:border-gray-700 dark:hover:bg-gray-900 transition-all duration-200 dark:group-[:hover]::bg-gray-900 group-[:hover]:bg-gray-100 gap-y-2">
+		<div
+			className={cn(
+				'flex flex-col w-full p-6 bg-card border backdrop-blur-sm border-muted-foreground rounded-lg shadow-2xl  gap-y-2"',
+				className
+			)}
+		>
 			{children}
 		</div>
 	);
